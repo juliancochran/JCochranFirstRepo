@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 /**
  * Sample code discussing data types, Chapter 5
+ * @version 10.26.2022
+ * @author jcochran
  */
 public class DataTypes {
     private double coolFactor;
