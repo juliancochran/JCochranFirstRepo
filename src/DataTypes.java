@@ -20,15 +20,15 @@ public class DataTypes {
     }
 
     public static int digitSwap(int num)   {
-        int ones = num % 10;
+        /*int ones = num % 10;
         num -= ones;
         int tens = num % 100;
         num -= tens;
         tens /= 10;
         num += (ones*10);
-        num += tens;
-
-        return num;
+        num += tens;*/
+        //return ones*10 + tens/10 + everything else;
+        return (num - (num % 100)) + ((num % 10) * 10) + ((num % 100) / 10);
 
 
 
@@ -38,6 +38,7 @@ public class DataTypes {
 
     public static void main(String[] args) {
         //int hours, double pay;
+        System.out.println(13 % 5.0);
         int num = 123;
         System.out.println(num + "\t" + digitSwap(num));
         num = 30;
@@ -45,14 +46,15 @@ public class DataTypes {
         num = 5;
         System.out.println(num + "\t" + digitSwap(num));
 
-        /*double coolFactor = 0;
-        Scanner in = new Scanner(System.in);
+        //double coolFactor = 0;
+        /*Scanner in = new Scanner(System.in);
         System.out.print("What is your name? ");
         String name = in.nextLine();
         if(name.toLowerCase().equals("julian")) {
-            coolFactor = 1.0;
+            double coolFactor = 1.0;
         }
         System.out.println("Your name is: " + name);
         System.out.println("And your coolness is " + coolFactor);*/
+        System.out.println((int)105.8);
     }
 }
